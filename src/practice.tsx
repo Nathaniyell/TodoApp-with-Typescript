@@ -12,6 +12,8 @@ let role: [number, string]; //A tuple: which Implies that the variable can only 
 // Initialize it incorrectly
 role = [10, "hello"]; // OK
 
+let anyTypeVariable: any //defines a variable with a type of any which means it can return a number, string, boolean etc
+
 //Defining types for an object
 type Person = {
   name: string;
