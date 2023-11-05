@@ -8,10 +8,11 @@ name = "Nath"
 
 let age:number; //Defines a type of number
 let isStudent: boolean; //Defines a type of boolean
-let hobbies:string[] //the hobbies variable can obly be an array of strings
+let hobbies:string[] //the hobbies variable can only be an array of strings
+let arrayOfNumbers:number[] //the arrayOfNumbers variable can only contain numbers
 let role:[number, string]; //A tuple: which Implies that the variable can only contain one number and one string
 // Initialize it
-role = ["hello", 10]; // Error
+//role = ["hello", 10]; // Error
 // Initialize it incorrectly
 role = [10, "hello"]; // OK
 
