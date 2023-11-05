@@ -28,3 +28,11 @@ person = {
 let lotsOfPeople: Person[] //defines an array of the person object
 
 let numberOrString: number | string //this is done using the union symbol(|), to specify that the variable can either be a number or a string
+
+let myFunction: (name:string)=>void //whatever is specified after the arrow is what the function returns, it can be a number, string or anything and also the parameter must be well defined
+
+
+function printName(name: string){
+    console.log(name);
+    
+}
