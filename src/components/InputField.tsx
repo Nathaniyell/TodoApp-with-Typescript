@@ -1,10 +1,19 @@
-import "./styles.css"
+import "./styles.css";
 
-const InputField = ()=>{
-return <form className="input">
-    <input type="input" placeholder="Enter a task" className="input__box" />
-    <button className="input__submit" type="submit">Go</button>
-</form>
-}
+type Props = {
+  todo: string;
+  setTodo: React.Dispatch<React.SetStateAction<string>>;
+};
 
-export default InputField
+const InputField = ({ todo, setTodo }: Props) => {
+  return (
+    <form className="input">
+      <input type="input" placeholder="Enter a task" className="input__box" />
+      <button className="input__submit" type="submit">
+        Go
+      </button>
+    </form>
+  );
+};
+
+export default InputField;
