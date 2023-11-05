@@ -15,8 +15,8 @@ const handleAdd=(e:React.FormEvent)=>{
     setTodos([...todos, {id: Date.now(), isDone: false, todo:todo }])
     setTodo("")
   }
-  console.log(todos);
 }
+console.log(todos);
 
   return <div className="App">
 <span className="heading">
