@@ -1,4 +1,5 @@
 import "./App.css"
+import InputField from "./components/InputField";
 
 const App:React.FC = () =>{ //React.FC specifies a functional component
   return <div className="App">
@@ -6,7 +7,7 @@ const App:React.FC = () =>{ //React.FC specifies a functional component
   Taskify
 </span>
 
-
+<InputField />
   </div>;
 }
 
