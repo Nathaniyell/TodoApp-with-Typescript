@@ -1,9 +1,14 @@
+  :root{
+    --primary:#772f1a;
+    --secondary1: #eb6541;
+    --secondary2: #f2a65a;
+  }
   .App{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #EB6541;
+    background-color: var(--primary);
   }
 
   .heading{
