@@ -20,9 +20,15 @@ role = [10, "hello"]; // OK
 type Person = {
   name: string;
   age: number;
+  //age?: number; //the question mark makes the age property optional, meaning that the object can be called without necessarily specifying the age property
 };
 
 let person: Person; //Attaches the properties of the Person object to this person variable
+
+person = {
+  name: "Nathandiel",
+  age: 14
+}
 
 function App() {
   return <div className="App">Hello World</div>;
