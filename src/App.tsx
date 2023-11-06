@@ -31,7 +31,7 @@ handleAdd={handleAdd}
   return <li>{t.todo}</li>
 })}
 
-{/* <TodoList todos={todos} /> */}
+<TodoList todos={todos} setTodos={setTodos} />
   </div>;
 }
 
