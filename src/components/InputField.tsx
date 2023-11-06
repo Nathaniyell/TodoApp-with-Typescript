@@ -1,4 +1,5 @@
 import "./styles.css";
+import {useRef} from "react"
 
 type Props = {
   todo: string;
@@ -7,6 +8,9 @@ type Props = {
 };
 
 const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
+
+const todoInputRef = useRef(null)
+
   return (
     <form className="input" onSubmit={(e)=>handleAdd(e)}>
       <input
@@ -15,6 +19,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
         className="input__box"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
+        ref={todoInputRef}
       />
       <button className="input__submit" type="submit">
         Go
