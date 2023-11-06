@@ -27,7 +27,11 @@ console.log(todos);
 <InputField todo={todo} setTodo={setTodo} 
 handleAdd={handleAdd}
 />
-<TodoList todos={todos} />
+{todos.map(t=>{
+  return <li>{t.todo}</li>
+})}
+
+{/* <TodoList todos={todos} /> */}
   </div>;
 }
 
