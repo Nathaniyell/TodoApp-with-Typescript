@@ -1,4 +1,5 @@
 import { Todo } from "../model";
+import SingleTodo from "./SingleTodo";
 
 type Props = {
     todos: Todo[],
@@ -7,15 +8,16 @@ type Props = {
 
 const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
     return (
-        <ul className="todos">
+        <div className="todos">
             {todos.map(todo => {
                 return (
-                    <li key={Date.now()}>
-                        <span>{todo.todo}</span>
-                    </li>
+                   <SingleTodo todo={todo} key={todo.id}
+                   todos={todos}
+                   setTodos={setTodos}
+                   />
                 );
             })}
-        </ul>
+        </div>
     );
 }
 

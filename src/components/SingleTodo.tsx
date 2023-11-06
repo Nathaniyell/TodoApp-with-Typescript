@@ -1,12 +1,27 @@
 import React from 'react'
+import { Todo } from '../model'
+import {AiFillEdit} from "react-icons/ai"
 
 type Props = {
-    
+todo: Todo;
+todos: Todo[];
+setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
-const SingleTodo:React.FC<Props> = () => {
+const SingleTodo:React.FC<Props> = ({todo, todos, setTodos}) => {
   return (
-    <div>SingleTodo</div>
+    <form className='todos__single'>
+        <span className="todos__single--text">
+          {todo.todo}  
+        </span>
+        <div>
+            <span className="icon">
+                <AiFillEdit />
+            </span>
+            <span className="icon"></span>
+            <span className="icon"></span>
+        </div>
+    </form>
   )
 }
 
