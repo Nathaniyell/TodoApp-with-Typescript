@@ -9,7 +9,7 @@ type Props = {
 
 const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
 
-const todoInputRef = useRef(null)
+const todoInputRef = useRef<HTMLInputElement> (null)
 
   return (
     <form className="input" onSubmit={(e)=>handleAdd(e)}>
