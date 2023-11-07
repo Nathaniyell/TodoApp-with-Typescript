@@ -13,10 +13,9 @@ type Props = {
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
 
   const handleDone=(id:number)=>{
-    set
+    setTodos(todos.map(todo=>todo.id===id?{...todo, isDone:!todo.isDone}: todo))
+
   }
-
-
   return (
     <form className="todos__single">
       <span className="todos__single--text">{todo.todo}</span>
