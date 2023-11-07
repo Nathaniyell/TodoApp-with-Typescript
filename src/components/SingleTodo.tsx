@@ -21,7 +21,7 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
   //s tag is used to cross off a piece of text
   return (
     <form className="todos__single">
-      {!todo.isDone ? (
+      {todo.isDone ? (
         <s className="todos__single--text">{todo.todo}</s> 
       ) : (
         <span className="todos__single--text">{todo.todo}</span>
