@@ -11,6 +11,12 @@ type Props = {
 };
 
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
+
+  const handleDone=(id:number)=>{
+    set
+  }
+
+
   return (
     <form className="todos__single">
       <span className="todos__single--text">{todo.todo}</span>
@@ -21,7 +27,7 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
         <span className="icon">
           <AiFillDelete />
         </span>
-        <span className="icon">
+        <span className="icon" onClick={()=>handleDone(todo.id)}>
           <MdDone />
         </span>
       </div>
