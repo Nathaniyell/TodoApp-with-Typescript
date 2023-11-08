@@ -26,14 +26,18 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
   };
 
   const handleEdit = (e:React.FormEvent, id: number) => {
-
+e.preventDefault()
+setTodos(
+  todos.map(todo=>todo.id===id?{...todo, todo:editTodo}: todo)
+)
+setEdit(false)
   }
   //s tag is used to cross off a piece of text
   return (
     <form className="todos__single" onSubmit={(e)=>handleEdit(e, todo.id)}>
 {
   edit ?(
-<input type="text" value={editTodo} onChange={(e)=>setEditTodo(e.target.value)} className="todos__single--text" />
+<input type="text" value={editTodo} onChange={(e)=>setEditTodo(e.target.value)} className="todos__single--test" />
   ): (
 
     
