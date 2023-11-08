@@ -71,6 +71,12 @@
   border: none;
   font-size: 20px;
 }
+.todos__single--test{
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  width: 62%;
+}
 .todos__single--text:focus {
   outline: none;
 }
@@ -107,5 +113,8 @@
   }
   .todos__single {
     width: 100%;
+  }
+  .todos__single--test{
+    flex: 1;
   }
 }
