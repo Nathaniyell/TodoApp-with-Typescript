@@ -11,10 +11,8 @@ type Props = {
 };
 
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
-const [edit, setEdit] = useState<boolean>(false)
-const [editTodo, setEditTodo] = useState<string>(todo.todo)
-
-
+  const [edit, setEdit] = useState<boolean>(false);
+  const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
   const handleDone = (id: number) => {
     setTodos(
@@ -27,9 +25,9 @@ const [editTodo, setEditTodo] = useState<string>(todo.todo)
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-const handleEdit=()=>{
-
-}
+  const handleEdit = () => {
+    if (!edit && !todo.isDone) setEdit(!edit);
+  };
 
   //s tag is used to cross off a piece of text
   return (
@@ -41,7 +39,7 @@ const handleEdit=()=>{
       )}
 
       <div>
-        <span className="icon" onClick={()=>handleEdit()}>
+        <span className="icon" onClick={() => handleEdit()}>
           <AiFillEdit />
         </span>
         <span className="icon" onClick={() => handleDelete(todo.id)}>
