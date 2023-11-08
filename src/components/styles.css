@@ -77,7 +77,7 @@
   font-size: 20px;
   width: 62%;
 }
-.todos__single--text:focus {
+.todos__single--text:focus, .todos__single--test:focus {
   outline: none;
 }
 .icon {
