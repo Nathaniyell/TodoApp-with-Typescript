@@ -25,13 +25,12 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  const handleEdit = () => {
-    if (!edit && !todo.isDone) setEdit(!edit);
-  };
+  const handleEdit = (e, isDone) => {
+
 
   //s tag is used to cross off a piece of text
   return (
-    <form className="todos__single">
+    <form className="todos__single" onSubmit={(e)=>handleEdit(e, todo.isDone)}>
 {
   edit ?(
 <input type="text" value={editTodo} onChange={(e)=>setEditTodo(e.target.value)} className="todos__single--text" />
@@ -47,7 +46,13 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
 }
 
       <div>
-        <span className="icon" onClick={() => handleEdit()}>
+        <span className="icon" onClick={()=>{
+          if(!edit && !todo.isDone){
+            setEdit(!edit)
+          }
+        }
+      }
+        >
           <AiFillEdit />
         </span>
         <span className="icon" onClick={() => handleDelete(todo.id)}>
