@@ -3,7 +3,7 @@ import {useRef} from "react"
 
 type Props = {
   todo: string;
-  setTodo: React.Dispatch<React.SetStateAction<string>>; //This is gotten from
+  setTodo: React.Dispatch<React.SetStateAction<string>>; //This is gotten by hovering on the useState call in app
   handleAdd: (e:React.FormEvent) => void;
 };
 
