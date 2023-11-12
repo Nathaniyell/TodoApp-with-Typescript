@@ -19,6 +19,9 @@ switch(action.type){
             break;
             case "done":
                 return state.map(todo=> todo.id!==action.payload ? {...todo, isDone:!todo.isDone }: todo)
+                break;
+                default:
+                    return state
         
 }
 }
