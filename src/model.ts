@@ -1,31 +1,35 @@
-import {useReducer} from "react"
+import { useReducer } from "react";
+
 export type Todo = {
-    id: number;
-    todo: string;
-    isDone:boolean;
-}
+  id: number;
+  todo: string;
+  isDone: boolean;
+};
+
 type Actions =
-|{    type: "add", payload:string}
-|{    type: "remove", payload:number}
-|{    type: "done", payload:number}
+  | { type: "add"; payload: string }
+  | { type: "remove"; payload: number }
+  | { type: "done"; payload: number };
 
-const reducer = (state:Todo[], action:Actions)=>{
-switch(action.type){
+const reducer = (state: Todo[], action: Actions) => {
+  switch (action.type) {
     case "add":
-        return[...state, {id:Date.now(), todo:action.payload, isDone:false}];
-        break;
-        case "remove":
-            return state.filter(todo=>todo.id !==action.payload);
-            break;
-            case "done":
-                return state.map(todo=> todo.id!==action.payload ? {...todo, isDone:!todo.isDone }: todo)
-                break;
-                default:
-                    return state
-        
-}
-}
+      return [...state, { id: Date.now(), todo: action.payload, isDone: false }];
+    case "remove":
+      return state.filter((todo) => todo.id !== action.payload);
+    case "done":
+      return state.map((todo) =>
+        todo.id === action.payload ? { ...todo, isDone: !todo.isDone } : todo
+      );
+    default:
+      return state;
+  }
+};
 
-const TodoReducer = ()=>{
-    const [state, dispatch] = useReducer(reducer, [])
-}
+const TodoReducer = () => {
+  const [state, dispatch] = useReducer(reducer, []);
+
+  return { state, dispatch };  
+};
+
+export default TodoReducer;
