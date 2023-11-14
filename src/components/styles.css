@@ -78,7 +78,7 @@
   transition: 0.2s;
 }
 .remove{
-  background-color: green;
+  background-color: rgb(22, 162, 22);
 }
 
 .todos__single--text {
@@ -131,4 +131,13 @@
   .todos__single--test{
     flex: 1;
   }
+}
+.dragactive{
+background-color: #7b230b;
+}
+.dragcomplete{
+background-color: green;
+}
+.drag{
+  box-shadow: 0 0 20px black;
 }

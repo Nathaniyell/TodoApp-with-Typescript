@@ -44,8 +44,8 @@ inputRef.current?.focus()
   return (
     <Draggable draggableId={todo.id.toString()} index={index}>
       {
-        (provided)=>(
-          <form className="todos__single" onSubmit={(e) => handleEdit(e, todo.id)}
+        (provided, snapshot)=>(
+          <form className={`todos__single ${snapshot.isDragging? "drag": ""}`} onSubmit={(e) => handleEdit(e, todo.id)}
           ref={provided.innerRef} {...provided.draggableProps}
           {...provided.dragHandleProps}
           >
