@@ -13,8 +13,8 @@ const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
   return (
     <div className="container">
       <Droppable droppableId="TodosList">
-        {() => (
-          <div className="todos">
+        {(provided) => (
+          <div className="todos" ref={provided.innerRef} {...provided.droppableProps}>
             <span className="todos__heading">Active Tasks</span>
             {todos.map((todo) => (
               <SingleTodo
