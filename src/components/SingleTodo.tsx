@@ -9,7 +9,7 @@ type Props = {
   todo: Todo;
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-  index?: number
+  index: number
 };
 
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos, index }) => {
@@ -42,7 +42,7 @@ inputRef.current?.focus()
   };
   //s tag is used to cross off a piece of text
   return (
-    <Draggable draggableId={todo.id.toString()} index={todo.id}>
+    <Draggable draggableId={todo.id.toString()} index={index}>
       {
         (provided)=>(
           <form className="todos__single" onSubmit={(e) => handleEdit(e, todo.id)}
