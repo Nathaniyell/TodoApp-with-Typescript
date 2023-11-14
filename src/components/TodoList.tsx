@@ -2,11 +2,13 @@ import { Todo } from "../model";
 import SingleTodo from "./SingleTodo";
 import "./styles.css"
 type Props = {
-    todos: Todo[],
-    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+    todos: Todo[];
+    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+    completedTodos: Todo[];
+    setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
-const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
+const TodoList: React.FC<Props> = ({ todos, setTodos}) => {
     return (
        <div className="container">
         <div className="todos">
