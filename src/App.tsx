@@ -24,9 +24,10 @@ const App: React.FC = () => {
     const {source, destination} = result
 
     if(!destination)return
-    if(destination.droppableId ==source.droppableId && destination.index==source.index)return
+    if(destination.droppableId ===source.droppableId && destination.index===source.index)return
 
-    let add
+    let add,active=todos,
+    complete=completedTodos
   }
 
   return (
