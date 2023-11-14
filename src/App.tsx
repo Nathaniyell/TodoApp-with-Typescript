@@ -28,6 +28,14 @@ const App: React.FC = () => {
 
     let add,active=todos,
     complete=completedTodos
+
+    if (source.droppableId === "TodoList"){
+      add = active[source.index]
+      active.splice(source.index, 1)
+    }else{
+      add = active[source.index]
+      active.splice(source.index, 1)
+    }
   }
 
   return (
