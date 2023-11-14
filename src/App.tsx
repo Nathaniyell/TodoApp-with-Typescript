@@ -3,6 +3,7 @@ import "./App.css"
 import InputField from "./components/InputField";
 import TodoReducer, { Todo } from "./model";
 import TodoList from "./components/TodoList";
+import {DragDropContext} from "react-beautiful-dnd"
 
 const App:React.FC = () =>{ //React.FC specifies a functional component
 
@@ -20,7 +21,9 @@ const handleAdd=(e:React.FormEvent)=>{
 }
 // console.log(todos);
 
-  return <div className="App">
+  return (
+  <DragDropContext onDragEnd={()=>{}}>
+  <div className="App">
 <span className="heading">
   Taskify
 </span>
@@ -35,6 +38,8 @@ completedTodos={completedTodos}
 setCompletedTodos={setCompletedTodos}
 />
   </div>;
+  </DragDropContext>
+  )
 }
 
 export default App;
