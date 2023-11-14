@@ -40,10 +40,10 @@ const App: React.FC = () => {
     if (source.droppableId === "TodoList"){
       active.splice(destination.index,0, add)
     }else{
-      add = active[source.index]
-      complete.splice(source.index, 1)
+      complete.splice(destination.index,0, add)
     }
-
+      setCompletedTodos(complete)
+      setTodos(active)
 
   }
 
