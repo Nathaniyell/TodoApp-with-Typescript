@@ -42,10 +42,13 @@ inputRef.current?.focus()
   };
   //s tag is used to cross off a piece of text
   return (
-    <Draggable draggableId={todo.id.toString()} index={index}>
+    <Draggable draggableId={todo.id.toString()} index={todo.id}>
       {
-        ()=>(
-          <form className="todos__single" onSubmit={(e) => handleEdit(e, todo.id)}>
+        (provided)=>(
+          <form className="todos__single" onSubmit={(e) => handleEdit(e, todo.id)}
+          ref={provided.innerRef} {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          >
           {edit ? (
             <input
               ref={inputRef}
