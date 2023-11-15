@@ -1,6 +1,8 @@
 
 # Taskify
 
+<img src="public/taskify.png" alt="Taskify Screenshot" />
+
 An innovative task management application meticulously crafted using the dynamic and efficient combination of React and TypeScript. This seamlessly integrated platform not only ensures a smooth user experience but also showcases the synergy between cutting-edge web technologies, allowing for robust task handling and an unparalleled level of responsiveness.
 
 
@@ -18,7 +20,5 @@ An innovative task management application meticulously crafted using the dynamic
 **Client:** React, Redux, CSS Modules, Typescript, React beautiful DND, TailwindCSS
 
 
-## Screenshots
 
-![App Screenshot](public/taskify.png)
 
