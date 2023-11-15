@@ -22,6 +22,7 @@ const App: React.FC = () => {
   // console.log(todos);
   const onDragEnd = (result: DropResult) => {
     const { source, destination } = result;
+    // console.log(result)
 
     if (!destination){
       return;
