@@ -58,7 +58,7 @@
   flex-direction: column;
   padding: 15px;
   border-radius: 5px;
-  background-color: var(--secondary1);
+  background-color: #3e1205;
 
 }
 .todos__heading{
