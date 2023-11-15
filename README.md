@@ -17,7 +17,7 @@ An innovative task management application meticulously crafted using the dynamic
 
 ## Tech Stack
 
-**Client:** React, Redux, CSS Modules, Typescript, React beautiful DND, TailwindCSS
+**Client:** React, Redux, CSS3, Typescript, React beautiful DND, TailwindCSS
 
 
 
